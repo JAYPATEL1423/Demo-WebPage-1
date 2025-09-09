@@ -1,28 +1,31 @@
 {
   "version": 2,
-  "name": "my-project",
+  "name": "visla",
   "builds": [
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "home.css",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "**/*.js",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "assets/**",
-      "use": "@vercel/static"
-    }
+    { "src": "index.html", "use": "@vercel/static" },
+    { "src": "home.css", "use": "@vercel/static" },
+    { "src": "index.js", "use": "@vercel/static" },
+    { "src": "assets/**", "use": "@vercel/static" }
   ],
-  "routes": [
+  "routes": [{ "src": "/(.*)", "dest": "/index.html" }],
+  "headers": [
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/home.css",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/index.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        }
+      ]
     }
   ]
 }
