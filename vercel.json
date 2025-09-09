@@ -5,7 +5,7 @@
     { "src": "index.html", "use": "@vercel/static" },
     { "src": "home.css", "use": "@vercel/static" },
     { "src": "index.js", "use": "@vercel/static" },
-    { "src": "assets/**", "use": "@vercel/static" }
+    { "src": "assets/images/**", "use": "@vercel/static" }
   ],
   "routes": [{ "src": "/(.*)", "dest": "/index.html" }],
   "headers": [
