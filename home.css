@@ -58,8 +58,8 @@ p {
 
 @media (max-width: 576px) {
   .custom-padding-menu {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .navbar .container-fluid {
@@ -375,6 +375,7 @@ a {
   background-repeat: repeat;
 }
 
+/* Mobile */
 @media (max-width: 576px) {
   #BLOG .h3 {
     font-size: 1.25rem;
@@ -390,6 +391,26 @@ a {
   }
 }
 
+/* Tablet */
+@media (min-width: 577px) and (max-width: 991px) {
+  #BLOG .h3 {
+    font-size: 1.5rem;
+    padding-top: 5%;
+    text-align: center;
+  }
+  #BLOG p {
+    font-size: 0.9rem;
+    text-align: center;
+    padding-top: 2%;
+  }
+  #BLOG button {
+    display: block;
+    margin: 1rem auto;
+    width: auto;
+  }
+}
+
+/* Desktop */
 @media (max-width: 992px) {
   #BLOG .h3 {
     font-size: 1.5rem;
